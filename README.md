@@ -55,6 +55,12 @@ Before trying to run this application, please ensure you install all of the corr
 
    Ensure that these are being read correctly by the bot.py script.
 
+   ![Dashboard](gh-assets/Dashboard.png)
+
+   > **Note**
+   >
+   > Keep the Client ID and Client Secret private and secure
+
 3. **Ask about Events in a Country:**
 
    Ask the bot about what events are on in a specific country and leave it to run.
