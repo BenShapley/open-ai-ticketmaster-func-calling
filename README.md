@@ -9,8 +9,10 @@
 <p>
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
+  <a href="#example-output">Example Output</a> •
   <a href="#credits">Credits</a> 
 </p>
+
 
 
 ## Key Features
@@ -57,7 +59,16 @@ Before trying to run this application, please ensure you install all of the corr
 
    Ask the bot about what events are on in a specific country and leave it to run.
 
-   
+
+
+
+## Example Output
+
+![Underline](gh-assets/Underline.png)
+
+![Underline](gh-assets/Exampleoutput.png)
+
+
 
 ## Credits
 
