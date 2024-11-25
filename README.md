@@ -1,6 +1,6 @@
 ![Logo](gh-assets/Ticketmaster_Logo.png)
 
-<h2>OpenAI x TicketMaster</h2>
+<h2>OpenAI x Ticketmaster</h2>
 
 <h5>OpenAI Function Calling to TicketMaster to Find Events.</h5>
 
