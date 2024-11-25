@@ -24,12 +24,12 @@ messages = [
 ]
 
 def find_events_by_country(country):
-    url = f"https://app.ticketmaster.com/discovery/v2/events.json?countryCode={country}&size={search_size}&sort=date,asc&apikey={client_key}"
+    url = f"https://app.ticketmaster.com/discovery/v2/events.json?countryCode={country}&onsaleStartDateTime=2024-12-01T00:00:00Z&classificationName=music&size={search_size}&sort=date,asc&apikey={client_key}"
     print(url)
     response = requests.get(url)
     data = response.json()
     #print(data)
-    return f"Here are some shows in {country}"
+    return f"Here are some shows in {country} upcoming shown within {data}"
 
 functions = [
     {
