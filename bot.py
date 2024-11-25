@@ -24,7 +24,7 @@ messages = [
 ]
 
 def find_events_by_country(country):
-    url = f"https://app.ticketmaster.com/discovery/v2/events.json?countryCode={country}&{search_size}&apikey={client_key}"
+    url = f"https://app.ticketmaster.com/discovery/v2/events.json?countryCode={country}&size={search_size}&sort=date,asc&apikey={client_key}"
     print(url)
     response = requests.get(url)
     data = response.json()
