@@ -19,7 +19,7 @@ client = AzureOpenAI(
 )
 
 messages = [
-    {"role": "system", "content":"Respond to everything angrily"},
+    {"role": "system", "content":"Be really happy and make everything sound so much cooler"},
     {"role": "user", "content":"Find me a upcoming music shows in the UK"}
 ]
 
