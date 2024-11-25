@@ -1,6 +1,6 @@
 ![Logo](gh-assets/Ticketmaster_Logo.png)
 
-<h4>OpenAI x TicketMaster</h4>
+<h2>OpenAI x TicketMaster</h2>
 
 <h5>OpenAI Function Calling to TicketMaster to Find Events.</h5>
 
@@ -15,6 +15,8 @@
 
 ## Key Features
 
+![Underline](gh-assets/Underline.png)
+
 * Find Events by Country
   - Input a country and OpenAI will call the Ticketmaster API function to find events
   
@@ -24,6 +26,8 @@
     
 
 ## How To Use
+
+![Underline](gh-assets/Underline.png)
 
 Before trying to run this application, please ensure you install all of the correct libraries to a virtual environment.
 
@@ -39,8 +43,8 @@ Before trying to run this application, please ensure you install all of the corr
    After this, modify the bot.py to access these and set them to the `api_key` and `azure_endpoint` variables.
 
    > **Note**
-> By base, the Key & Endpoint are being read by the OS which can be defined within your command prompt.
-
+   >
+   > By base, the Key & Endpoint are being read by the OS which can be defined within your command prompt.
 2. **Set up your Ticketmaster Developer Account:**
 
    Set up a [Developer Account](https://developer-acct.ticketmaster.com/user/login) on Ticketmaster and then create an app.
@@ -56,6 +60,8 @@ Before trying to run this application, please ensure you install all of the corr
    
 
 ## Credits
+
+![Underline](gh-assets/Underline.png)
 
 Huge thanks to:
 
