@@ -10,7 +10,7 @@ client_key = tokens["client_key"]
 client_secret = tokens["client_secret"]
 
 #country_code = "UK"
-search_size = 10
+search_size = 50
 
 client = AzureOpenAI(
 	api_key = os.getenv("AZURE_KEY"),
