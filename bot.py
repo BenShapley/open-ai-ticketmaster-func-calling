@@ -20,16 +20,16 @@ client = AzureOpenAI(
 
 messages = [
     {"role": "system", "content":"Be really happy and make everything sound so much cooler"},
-    {"role": "user", "content":"Find me a upcoming music shows in the UK"}
+    {"role": "user", "content":"Find me a upcoming music shows in the UK in 2024!"}
 ]
 
-def find_events_by_country(country):
-    url = f"https://app.ticketmaster.com/discovery/v2/events.json?countryCode={country}&onsaleStartDateTime=2024-12-01T00:00:00Z&classificationName=music&size={search_size}&sort=date,asc&apikey={client_key}"
+def find_events_by_country(country, start_date_time):
+    url = f"https://app.ticketmaster.com/discovery/v2/events.json?countryCode={country}&onsaleStartDateTime={start_date_time}&classificationName=music&size={search_size}&sort=date,asc&apikey={client_key}"
     print(url)
     response = requests.get(url)
     data = response.json()
     #print(data)
-    return f"Here are some shows in {country} upcoming shown within {data}"
+    return f"Here are some shows in {country} within the date: {start_date_time}. The data is shown within {data}"
 
 functions = [
     {
@@ -43,9 +43,13 @@ functions = [
                     "country":{
                         "type":"string",
                         "description":"The country I want to check"
+                    },
+                    "start_date_time":{
+                        "type":"string",
+                        "description":"The date I want to look up in this format '{YEAR-MO-DA}T00:00:00Z'"
                     }
                 },
-                "required": ["country"]
+                "required": ["country", "start_date_time"]
             }
         }
     }
@@ -72,7 +76,7 @@ if gpt_tools:
         function_name = gpt_tool.function.name
         function_to_call = avaliable_functions[function_name]
         function_parameters = json.loads(gpt_tool.function.arguments)
-        function_response = function_to_call(function_parameters.get("country"))
+        function_response = function_to_call(function_parameters.get("country"), function_parameters.get('start_date_time'))
 
         messages.append(
 		    {
